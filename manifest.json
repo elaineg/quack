@@ -1,22 +1,27 @@
 {
-  "manifest_version": 2,
-  "name": "Quack",
-  "description": "This extension enables users to interact with a page with voice commands",
-  "version": "1.0",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+    "manifest_version": 2,
+    "name": "Quack",
+    "description": "This extension enables users to interact with a page with voice commands",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_title": "Quack",
-    "default_icon": "icon-blue.png",
-    "default_popup": "popup.html"
-  },
+    "background": {
+	"scripts": ["background.js"],
+	"persistent": true
+    },
 
-  "permissions": [
-    "activeTab",
-    "storage",
-    "management"
-  ]
+    "browser_action": {
+	"default_title": "Quack",
+	"default_icon": "icon-blue.png"
+    },
+
+    "permissions": [
+	"activeTab",
+	"storage",
+	"management"
+    ],
+    
+    "content_scripts": [{
+	"matches": ["<all_urls>"],
+	"js":      ["quack_dom.js"]
+    }]
 }
