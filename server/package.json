@@ -1,0 +1,30 @@
+{
+  "name": "QHActionCreate",
+  "version": "0.0.0",
+  "description": "",
+  "author": "MorganScott <morgan.j.f.scott@gmail.com>",
+  "main": "functions/__main__.js",
+  "dependencies": {
+    "babyparse": "^0.4.6",
+    "bluebird": "^3.5.1",
+    "fs-extra": "^4.0.2",
+    "line-reader": "^0.4.0",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "requestretry": "^1.12.2",
+    "synonyms-cli": "^1.0.1",
+    "lib": "^3.0.1"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "MorganScott/QHActionCreate",
+    "timeout": 10000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}
