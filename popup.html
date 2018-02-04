@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Quack Chrome Extension</title>
+    <link href="popup.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  </head>
+
+  <body>
+
+<!-- Quack Logo -->
+<img src="states/logo.png" alt="Quack Logo" id="logo">
+
+
+  <!-- State one: Listening -->
+    <h1 id="header">What would you like to do?</h1>
+    <div class="spinner" id="readyButton">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+    <div>
+      <p id="info">Try these quacks:</p>
+      <ul id="sampleCommands">
+        <li>"Play ..."</li>
+        <li>"Search for ..."</li>
+        <li>"Go back"</li>
+        <li>"Scroll down"</li>
+      </ul>
+    </div>
+
+<!-- State two: Analyzing -->
+  <h1 id="analyzing">Analyzing your command...</h1>
+  <div id="loadingImage">
+    <div class="loader">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+
+
+<!-- State three: Successfully found a command -->
+  <h1 id="success">Success!</h1>
+
+<!-- State four: Command not found -->
+  <h1 id="notFound">Command not found.</h1>
+  <h3 id="instructions">You can teach me the correct action for that voice command by performing it on the page.</h3>
+  <button type="button" id="button1">Assign Command</button>
+  <button type="button" id="button2">Create New</button>
+
+<!-- scripts -->
+  <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="popup.js" type="text/javascript"></script>
+
+  </body>
+</html>
